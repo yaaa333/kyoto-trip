@@ -312,6 +312,42 @@
   @media (prefers-color-scheme: dark){.fno{color:#8fdcc2}}
   .howto{display:inline-flex;align-items:center;gap:3px;font-size:12px;color:#fff;background:var(--rust);border-radius:99px;padding:2px 10px;text-decoration:none;white-space:nowrap;vertical-align:2px;box-shadow:0 2px 0 color-mix(in srgb,var(--rust) 70%,#000)}
   .howto:active{transform:translateY(1px);box-shadow:none}
+  .wxfab{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent;transition:transform .15s;
+    background:#e2f1fb;color:#3f93c9;border:2px solid #fff;box-shadow:0 4px 14px rgba(90,100,120,.16)}
+  .wxfab:active{transform:scale(.9)}
+  .wxseg{display:flex;margin-bottom:12px}
+  .wxseg button{flex:1}
+  .wxnow{text-align:center;padding:6px 0 4px}
+  .wxclock{font-size:14px;color:var(--sub)}
+  .wxclock b{display:block;font-size:30px;color:var(--ink);font-weight:400;font-variant-numeric:tabular-nums;letter-spacing:.03em}
+  .wxicon{font-size:58px;line-height:1.1;margin-top:8px}
+  .wxtemp{font-size:46px;line-height:1.1;font-variant-numeric:tabular-nums}
+  .wxtemp small{font-size:20px;color:var(--sub)}
+  .wxdesc{font-size:16px;margin-top:2px}
+  .wxhl{font-size:13px;color:var(--sub);margin-top:2px}
+  .wxgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+  .wxgrid div{background:var(--paper);border:2px solid var(--line);border-radius:16px;padding:8px 6px;text-align:center;font-size:12px;color:var(--sub)}
+  .wxgrid div b{display:block;font-size:17px;color:var(--ink);font-weight:400;font-variant-numeric:tabular-nums}
+  .wxtop{display:grid;grid-template-columns:1fr 92px;gap:12px;align-items:center}
+  .wxtop .wxnow{text-align:center;padding:4px 0 0}
+  .wxtop .wxclock{font-size:13px}
+  .wxtop .wxclock b{font-size:28px}
+  .wxtop .wxicon{font-size:50px;margin-top:6px}
+  .wxtop .wxtemp{font-size:42px}
+  .wxtop .wxgrid{grid-template-columns:1fr;margin-top:0;gap:8px}
+  .wxtop .wxgrid div{padding:8px 4px}
+  .wxwear{display:flex;gap:12px;align-items:flex-start;margin-top:12px;padding:12px 14px;border-radius:18px;background:var(--rust-bg);border:2px dashed color-mix(in srgb,var(--rust) 35%,transparent)}
+  .wxwear .wi{font-size:26px;line-height:1.2;white-space:nowrap}
+  .wxwear b{font-weight:400;font-size:15px;color:var(--ink)}
+  .wxwear ul{margin:4px 0 0 16px;padding:0;font-size:12.5px;color:var(--sub);line-height:1.6}
+  .wxdays{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:14px}
+  .wxdays div{text-align:center;font-size:12px;color:var(--sub);background:var(--paper);border-radius:14px;padding:7px 2px;border:2px solid var(--line)}
+  .wxdays div span{display:block;font-size:22px;line-height:1.3}
+  .wxdays div b{display:block;color:var(--ink);font-weight:400;font-variant-numeric:tabular-nums}
+  .wxfoot{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--sub);margin-top:12px;gap:8px}
+  .wxfoot button{font:inherit;font-size:12px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:4px 12px;white-space:nowrap}
+  .wxmsg{text-align:center;color:var(--sub);font-size:13px;padding:24px 0}
+  .wxwarn{font-size:12px;color:var(--rust);text-align:center;margin-top:6px}
   .toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);z-index:30;
     background:var(--ink);color:var(--paper);font-size:14px;padding:9px 16px;border-radius:99px;opacity:0;transition:.25s;pointer-events:none;white-space:nowrap}
   .toast.show{opacity:1;transform:translateX(-50%)}
@@ -660,7 +696,7 @@ window.__HUNINN='d09GMgABAAAAEbLsABEAAAAja3QAEbKHAAIZmgAAAAAAAAAAAAAAAAAAAAAAAAA
 
 <a href="#" class="top">回到頂端 ↑</a>
 </div>
-<div class="fabs"><button class="calcfab" id="calcFab" aria-label="開啟計算機"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><rect x="7" y="5.5" width="10" height="4" rx="1"/><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg></button><button class="taxfab" id="taxFab" aria-label="日本退稅查詢">退</button><button class="vjfab" id="vjFab" aria-label="Visit Japan Web 入境 QR Code"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><circle cx="12" cy="10" r="3.2"/><path d="M8.8 10h6.4M12 6.8c1 .9 1.4 2 1.4 3.2s-.4 2.3-1.4 3.2M12 6.8c-1 .9-1.4 2-1.4 3.2s.4 2.3 1.4 3.2M9 17h6"/></svg></button><button class="tipfab" id="tipFab" aria-label="開啟提醒"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg></button><button class="fx on" id="fxBtn" aria-pressed="true" aria-label="楓葉特效開關">🍁</button></div>
+<div class="fabs"><button class="calcfab" id="calcFab" aria-label="開啟計算機"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><rect x="7" y="5.5" width="10" height="4" rx="1"/><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg></button><button class="taxfab" id="taxFab" aria-label="日本退稅查詢">退</button><button class="vjfab" id="vjFab" aria-label="Visit Japan Web 入境 QR Code"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><circle cx="12" cy="10" r="3.2"/><path d="M8.8 10h6.4M12 6.8c1 .9 1.4 2 1.4 3.2s-.4 2.3-1.4 3.2M12 6.8c-1 .9-1.4 2-1.4 3.2s.4 2.3 1.4 3.2M9 17h6"/></svg></button><button class="tipfab" id="tipFab" aria-label="開啟提醒"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg></button><button class="wxfab" id="wxFab" aria-label="即時天氣"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5v1.3M3.9 5.4l.9.9M2.5 9.5h1.3M12.1 5.4l-.9.9"/><path d="M5.6 11.2A3.3 3.3 0 0 1 11.6 8"/><path d="M7.5 19.5h9.3a3.6 3.6 0 0 0 .3-7.2 5 5 0 0 0-9.6 1.2 3 3 0 0 0 0 6z"/></svg></button><button class="fx on" id="fxBtn" aria-pressed="true" aria-label="楓葉特效開關">🍁</button></div>
 <div class="shade" id="shade"></div>
 <div class="sheet" id="sheet" role="dialog" aria-label="計算機">
     <div id="pCalc">
@@ -709,6 +745,13 @@ window.__HUNINN='d09GMgABAAAAEbLsABEAAAAja3QAEbKHAAIZmgAAAAAAAAAAAAAAAAAAAAAAAAA
   <div class="top2"><b id="qrT"></b><span style="display:flex;gap:6px"><button type="button" id="qrZ">放大</button><button type="button" id="qrX">關閉 ✕</button></span></div>
   <div class="sc2"><img id="qrImg" alt="QR Code"></div>
   <div class="nav2"><button type="button" id="qrP">‹ 上一張</button><span id="qrN"></span><button type="button" id="qrNx">下一張 ›</button></div>
+</div>
+<div class="shade" id="wxShade"></div>
+<div class="sheet" id="wxSheet" role="dialog" aria-label="即時天氣">
+  <div class="shead"><b>即時天氣</b><button class="close" id="wxX">✕</button></div>
+  <div class="seg wxseg" id="wxSeg"><button data-c="tyn">台灣桃園</button><button data-c="kyo" class="on">日本京都</button></div>
+  <div id="wxBody"></div>
+  <div class="wxfoot"><span id="wxUpd"></span><button type="button" id="wxRe">↻ 重新整理</button></div>
 </div>
 <div class="shade" id="tipShade"></div>
 <div class="sheet tipsheet" id="tipSheet" role="dialog" aria-label="提醒">
@@ -1190,6 +1233,80 @@ window.__HUNINN='d09GMgABAAAAEbLsABEAAAAja3QAEbKHAAIZmgAAAAAAAAAAAAAAAAAAAAAAAAA
 <script>
 // 放到 GitHub Pages（https）時才啟用離線快取；本機檔案打開時自動略過
 if('serviceWorker' in navigator && location.protocol==='https:'){navigator.serviceWorker.register('sw.js').catch(function(){})}
+</script>
+<script>
+/* 即時天氣：Open-Meteo 免費 API（免金鑰）。離線時顯示上次抓到的資料 */
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var CITY={kyo:{n:'日本京都',lat:35.0116,lon:135.7681,tz:'Asia/Tokyo'},tyn:{n:'台灣桃園',lat:24.9936,lon:121.3010,tz:'Asia/Taipei'}};
+  var cur='kyo',timer=null,data={},KEY='kyoto-osaka-2026-wx';
+  try{data=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){data={}}
+  var W={0:['晴朗','☀️'],1:['大致晴朗','🌤️'],2:['局部多雲','⛅'],3:['陰天','☁️'],45:['有霧','🌫️'],48:['霧凇','🌫️'],
+    51:['毛毛雨','🌦️'],53:['毛毛雨','🌦️'],55:['較強毛毛雨','🌧️'],56:['凍毛毛雨','🌧️'],57:['凍毛毛雨','🌧️'],
+    61:['小雨','🌧️'],63:['中雨','🌧️'],65:['大雨','🌧️'],66:['凍雨','🌧️'],67:['強凍雨','🌧️'],
+    71:['小雪','🌨️'],73:['中雪','🌨️'],75:['大雪','❄️'],77:['雪粒','🌨️'],
+    80:['陣雨','🌦️'],81:['較強陣雨','🌧️'],82:['豪大陣雨','⛈️'],85:['陣雪','🌨️'],86:['強陣雪','❄️'],
+    95:['雷雨','⛈️'],96:['雷雨夾冰雹','⛈️'],99:['強雷雨夾冰雹','⛈️']};
+  function wx(code,day){var w=W[code]||['—','🌡️'];if(day===0&&(code===0||code===1))return[w[0],'🌙'];return w}
+  var WD=['日','一','二','三','四','五','六'];
+  function fmtNow(tz){var d=new Date();
+    var p=new Intl.DateTimeFormat('zh-TW',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit',weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).formatToParts(d);
+    var o={};p.forEach(function(x){o[x.type]=x.value});
+    return{date:o.year+'/'+o.month+'/'+o.day+'（'+o.weekday.replace('週','')+'）',time:(o.hour==='24'?'00':o.hour)+':'+o.minute+':'+o.second}}
+  function tick(){var c=CITY[cur],n=fmtNow(c.tz),el=$('wxClock');if(el)el.innerHTML=n.date+' · 當地時間<b>'+n.time+'</b>'}
+  function r1(x){return Math.round(x)}
+  // 建議穿著：依今天平均溫度分級，再看溫差、降雨、下雪
+  var WEAR=[[28,'👕🧢','短袖、透氣衣物','注意防曬、多補充水分'],[23,'👕','短袖或薄長袖','室內冷氣可備薄外套'],
+    [18,'👚🧥','長袖＋薄外套','輕便好穿脫的外套最實用'],[13,'🧶🧥','長袖＋針織衫或輕外套','早晚偏涼，外套別忘了帶'],
+    [8,'🧥🧣','毛衣＋大衣或羽絨背心','圍巾很實用，保暖又好搭'],[3,'🧥🧣🧤','厚外套或羽絨衣＋圍巾手套','可加發熱衣，室內再脫外套'],
+    [-99,'🧤🧣❄️','羽絨衣＋發熱衣＋毛帽手套','非常冷，注意保暖與路面濕滑']];
+  function wear(k,dy){
+    var hi=dy.temperature_2m_max[0],lo=dy.temperature_2m_min[0],avg=(hi+lo)/2,lv=WEAR[WEAR.length-1];
+    for(var i=0;i<WEAR.length;i++)if(avg>=WEAR[i][0]){lv=WEAR[i];break}
+    var tips=[lv[3]],code=k.weather_code,pp=dy.precipitation_probability_max?dy.precipitation_probability_max[0]:0;
+    if(hi-lo>=8)tips.push('早晚溫差 '+r1(hi-lo)+'°，建議洋蔥式穿搭');
+    if([71,73,75,77,85,86].indexOf(dy.weather_code[0])>=0)tips.push('可能下雪，穿防滑好走的鞋');
+    else if(code>=51&&code<=82)tips.push('現在正在下雨，記得帶傘 ☂️');
+    else if(pp>=40)tips.push('降雨機率 '+pp+'%，記得帶傘 ☂️');
+    return '<div class="wxwear"><div class="wi">'+lv[1]+'</div><div><b>建議穿著：'+lv[2]+'</b><ul>'+tips.map(function(t){return'<li>'+t+'</li>'}).join('')+'</ul></div></div>'}
+  function render(){
+    var c=CITY[cur],d=data[cur],b=$('wxBody');
+    if(!d){b.innerHTML='<div class="wxnow"><div class="wxclock" id="wxClock"></div></div><div class="wxmsg">'+(navigator.onLine===false?'目前離線，還沒有天氣資料<br>連上網路後再試一次':'讀取天氣中…')+'</div>';tick();$('wxUpd').textContent='';return}
+    var k=d.current,dy=d.daily,w=wx(k.weather_code,k.is_day);
+    var days='';for(var i=1;i<Math.min(6,dy.time.length);i++){var t=new Date(dy.time[i]+'T00:00:00'),ww=wx(dy.weather_code[i],1);
+      days+='<div>'+(t.getMonth()+1)+'/'+t.getDate()+'（'+WD[t.getDay()]+'）<span>'+ww[1]+'</span><b>'+r1(dy.temperature_2m_max[i])+'° / '+r1(dy.temperature_2m_min[i])+'°</b>'+(dy.precipitation_probability_max?'💧'+(dy.precipitation_probability_max[i]==null?'-':dy.precipitation_probability_max[i])+'%':'')+'</div>'}
+    b.innerHTML='<div class="wxtop"><div class="wxnow"><div class="wxclock" id="wxClock"></div>'
+      +'<div class="wxicon">'+w[1]+'</div><div class="wxtemp">'+r1(k.temperature_2m)+'<small>°C</small></div>'
+      +'<div class="wxdesc">'+c.n+' · '+w[0]+'</div>'
+      +'<div class="wxhl">今天 最高 '+r1(dy.temperature_2m_max[0])+'° · 最低 '+r1(dy.temperature_2m_min[0])+'°</div></div>'
+      +'<div class="wxgrid"><div>體感<b>'+r1(k.apparent_temperature)+'°</b></div><div>濕度<b>'+r1(k.relative_humidity_2m)+'%</b></div><div>降雨機率<b>'+(dy.precipitation_probability_max&&dy.precipitation_probability_max[0]!=null?dy.precipitation_probability_max[0]:'-')+'%</b></div></div></div>'
+      +wear(k,dy)
+      +'<div class="wxdays">'+days+'</div>'
+      +(d.stale?'<div class="wxwarn">目前無法連線，顯示的是上次更新的資料</div>':'');
+    tick();
+    var u=new Date(d.at);$('wxUpd').textContent='更新於 '+(u.getMonth()+1)+'/'+u.getDate()+' '+('0'+u.getHours()).slice(-2)+':'+('0'+u.getMinutes()).slice(-2)+'（台灣時間）· Open-Meteo';
+  }
+  function load(force){
+    var key=cur,c=CITY[key],d=data[key];
+    if(d&&!force&&Date.now()-d.at<10*60*1000){d.stale=false;render();return}
+    render();
+    var url='https://api.open-meteo.com/v1/forecast?latitude='+c.lat+'&longitude='+c.lon
+      +'&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,is_day'
+      +'&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max'
+      +'&timezone='+encodeURIComponent(c.tz)+'&forecast_days=6';
+    fetch(url).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+      data[key]={current:j.current,daily:j.daily,at:Date.now()};try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){}
+      if(cur===key)render();
+    }).catch(function(){if(data[key])data[key].stale=true;if(cur===key){render();if(!data[key])$('wxBody').querySelector('.wxmsg').innerHTML='無法取得天氣資料<br>請確認網路後按「重新整理」'}});
+  }
+  var sh=$('wxSheet'),sd=$('wxShade');
+  function o(){sh.classList.add('open');sd.classList.add('open');load(false);clearInterval(timer);timer=setInterval(tick,1000)}
+  function c(){sh.classList.remove('open');sd.classList.remove('open');clearInterval(timer)}
+  $('wxFab').addEventListener('click',o);$('wxX').addEventListener('click',c);sd.addEventListener('click',c);
+  $('wxRe').addEventListener('click',function(){load(true)});
+  $('wxSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.dataset.c===cur)return;
+    cur=b.dataset.c;[].forEach.call(this.children,function(x){x.classList.toggle('on',x===b)});load(false)});
+})();
 </script>
 </body>
 </html>
