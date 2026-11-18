@@ -310,6 +310,8 @@
   @media (prefers-reduced-motion: reduce){.cwhint{animation:none}}
   .fno{color:#2f9a7c;font-size:13px;letter-spacing:.04em;margin-left:2px;white-space:nowrap}
   @media (prefers-color-scheme: dark){.fno{color:#8fdcc2}}
+  .howto{display:inline-flex;align-items:center;gap:3px;font-size:12px;color:#fff;background:var(--rust);border-radius:99px;padding:2px 10px;text-decoration:none;white-space:nowrap;vertical-align:2px;box-shadow:0 2px 0 color-mix(in srgb,var(--rust) 70%,#000)}
+  .howto:active{transform:translateY(1px);box-shadow:none}
   .toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);z-index:30;
     background:var(--ink);color:var(--paper);font-size:14px;padding:9px 16px;border-radius:99px;opacity:0;transition:.25s;pointer-events:none;white-space:nowrap}
   .toast.show{opacity:1;transform:translateX(-50%)}
@@ -498,7 +500,7 @@ window.__HUNINN='d09GMgABAAAAEbLsABEAAAAja3QAEbKHAAIZmgAAAAAAAAAAAAAAAAAAAAAAAAA
   <table>
     <tr><th>飯店</th><th>入住</th></tr>
     <tr><td><b>RESI STAY Fuyacho</b><small>レジステイ 麩屋町</small></td><td>11/21 15:00 起</td></tr>
-    <tr><td colspan="2"><b>迎賓櫃檯（先在這裡辦入住、拿鑰匙密碼）</b><br>
+    <tr><td colspan="2"><b>迎賓櫃檯（先在這裡辦入住、拿鑰匙密碼）</b> <a class="howto" href="https://www.instagram.com/reel/DXxniFghXle/?dmpr=azZ1aTNwM3M0em5q" target="_blank" rel="noopener">▶ 教你怎麼走</a><br>
       ON BLD 5F RESI STAY Reception Counter<small>〒600-8216 京都市下京區東塩小路町 544-2（京都車站附近）</small>
       <a href="https://maps.app.goo.gl/Bnvujqwd2DCX6WKn9" target="_blank" rel="noopener" style="font-size:12px;color:var(--navy)">開啟地圖 ↗</a></td></tr>
   </table>
@@ -658,7 +660,7 @@ window.__HUNINN='d09GMgABAAAAEbLsABEAAAAja3QAEbKHAAIZmgAAAAAAAAAAAAAAAAAAAAAAAAA
 
 <a href="#" class="top">回到頂端 ↑</a>
 </div>
-<div class="fabs"><button class="calcfab" id="calcFab" aria-label="開啟計算機"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><rect x="7" y="5.5" width="10" height="4" rx="1"/><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg></button><button class="taxfab" id="taxFab" aria-label="日本退稅查詢">退</button><button class="jrfab" id="jrFab" aria-label="JR 車票 QR Code"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><path transform="rotate(0 12 12)" d="M12 11.2c-1.9-1.5-3.1-3.6-2.6-5.6.3-1.2 1.2-2 2.1-2.1l.5 1.1.5-1.1c.9.1 1.8.9 2.1 2.1.5 2-.7 4.1-2.6 5.6z"/><path transform="rotate(72 12 12)" d="M12 11.2c-1.9-1.5-3.1-3.6-2.6-5.6.3-1.2 1.2-2 2.1-2.1l.5 1.1.5-1.1c.9.1 1.8.9 2.1 2.1.5 2-.7 4.1-2.6 5.6z"/><path transform="rotate(144 12 12)" d="M12 11.2c-1.9-1.5-3.1-3.6-2.6-5.6.3-1.2 1.2-2 2.1-2.1l.5 1.1.5-1.1c.9.1 1.8.9 2.1 2.1.5 2-.7 4.1-2.6 5.6z"/><path transform="rotate(216 12 12)" d="M12 11.2c-1.9-1.5-3.1-3.6-2.6-5.6.3-1.2 1.2-2 2.1-2.1l.5 1.1.5-1.1c.9.1 1.8.9 2.1 2.1.5 2-.7 4.1-2.6 5.6z"/><path transform="rotate(288 12 12)" d="M12 11.2c-1.9-1.5-3.1-3.6-2.6-5.6.3-1.2 1.2-2 2.1-2.1l.5 1.1.5-1.1c.9.1 1.8.9 2.1 2.1.5 2-.7 4.1-2.6 5.6z"/></g><circle cx="12" cy="12" r="1.6" fill="#fff"/></svg></button><button class="vjfab" id="vjFab" aria-label="Visit Japan Web 入境 QR Code"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><circle cx="12" cy="10" r="3.2"/><path d="M8.8 10h6.4M12 6.8c1 .9 1.4 2 1.4 3.2s-.4 2.3-1.4 3.2M12 6.8c-1 .9-1.4 2-1.4 3.2s.4 2.3 1.4 3.2M9 17h6"/></svg></button><button class="tipfab" id="tipFab" aria-label="開啟提醒"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg></button><button class="fx on" id="fxBtn" aria-pressed="true" aria-label="楓葉特效開關">🍁</button></div>
+<div class="fabs"><button class="calcfab" id="calcFab" aria-label="開啟計算機"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><rect x="7" y="5.5" width="10" height="4" rx="1"/><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg></button><button class="taxfab" id="taxFab" aria-label="日本退稅查詢">退</button><button class="vjfab" id="vjFab" aria-label="Visit Japan Web 入境 QR Code"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><circle cx="12" cy="10" r="3.2"/><path d="M8.8 10h6.4M12 6.8c1 .9 1.4 2 1.4 3.2s-.4 2.3-1.4 3.2M12 6.8c-1 .9-1.4 2-1.4 3.2s.4 2.3 1.4 3.2M9 17h6"/></svg></button><button class="tipfab" id="tipFab" aria-label="開啟提醒"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg></button><button class="fx on" id="fxBtn" aria-pressed="true" aria-label="楓葉特效開關">🍁</button></div>
 <div class="shade" id="shade"></div>
 <div class="sheet" id="sheet" role="dialog" aria-label="計算機">
     <div id="pCalc">
@@ -695,13 +697,6 @@ window.__HUNINN='d09GMgABAAAAEbLsABEAAAAja3QAEbKHAAIZmgAAAAAAAAAAAAAAAAAAAAAAAAA
 <div class="sheet taxsheet" id="taxSheet" role="dialog" aria-label="日本退稅查詢">
   <div class="shead"><b>日本退稅查詢</b><button class="close" id="taxX">✕</button></div>
   <iframe id="taxFrame" title="日本退稅查詢"></iframe>
-</div>
-<div class="shade" id="jrShade"></div>
-<div class="sheet jrsheet" id="jrSheet" role="dialog" aria-label="JR 車票 QR Code">
-  <div class="shead"><b>JR 車票 QR Code</b><button class="close" id="jrX">✕</button></div>
-  <div class="jrlist" id="jrList"></div>
-  <label class="jrup" id="jrUp">＋ 上傳截圖<input type="file" id="jrFile" accept="image/*" multiple></label>
-  <div class="jrnote">截圖存在這支手機裡，離線也能打開。點圖片可全螢幕給站務員或機器掃描。</div>
 </div>
 <div class="shade" id="vjShade"></div>
 <div class="sheet jrsheet" id="vjSheet" role="dialog" aria-label="Visit Japan Web 入境">
@@ -1189,7 +1184,6 @@ window.__HUNINN='d09GMgABAAAAEbLsABEAAAAja3QAEbKHAAIZmgAAAAAAAAAAAAAAAAAAAAAAAAA
     function c(){sh.classList.remove('open');sd.classList.remove('open')}
     $(k+'Fab').addEventListener('click',o);$(k+'X').addEventListener('click',c);sd.addEventListener('click',c);
   }
-  box('jr','jr',['去程 HARUKA','回程 HARUKA'],'<b>🌸</b>還沒有 QR Code<br>上傳 HARUKA 換票 QR Code 的截圖','名稱，例：去程 HARUKA');
   box('vj','vjw',['入境審查','海關申報'],'<b>🛂</b>還沒有 QR Code<br>上傳 Visit Japan Web 的入境審查、海關申報截圖','名稱，例：入境審查');
 })();
 </script>
