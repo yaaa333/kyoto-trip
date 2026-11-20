@@ -348,6 +348,12 @@
   .wxfoot button{font:inherit;font-size:12px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:4px 12px;white-space:nowrap}
   .wxmsg{text-align:center;color:var(--sub);font-size:13px;padding:24px 0}
   .wxwarn{font-size:12px;color:var(--rust);text-align:center;margin-top:6px}
+  /* 清單往內縮，避免右側懸浮按鈕擋到 × */
+  @media (max-width:680px){
+    #pack .pk{margin-right:40px}
+    #pack .del{padding:4px 8px;margin-right:-4px}
+    #recs{margin-right:44px}
+  }
   .toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);z-index:30;
     background:var(--ink);color:var(--paper);font-size:14px;padding:9px 16px;border-radius:99px;opacity:0;transition:.25s;pointer-events:none;white-space:nowrap}
   .toast.show{opacity:1;transform:translateX(-50%)}

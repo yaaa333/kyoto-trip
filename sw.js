@@ -1,6 +1,6 @@
 // 讓行程表存在手機裡，離線也能打開。
 // 之後更新 index.html 時，把下面的版本號 +1（例如 v6），大家連網打開就會更新。
-const VERSION = 'kyoto-osaka-v10';
+const VERSION = 'kyoto-osaka-v12';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
